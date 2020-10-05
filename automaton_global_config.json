@@ -1,0 +1,19 @@
+{
+    "project_name":"ims-rfid-events-perf-test1",
+    "slack":"ims-avatar-cloud-deploy",
+    "email": ["aditya.saxena@walmart.com","sindhurareddy.kotha@walmart.com","james.mallory@walmart.com"],
+    "variables":{
+        "scmurl": "https://gecgithub01.walmart.com/SSAEIM/rfid-load-producer.git",
+        "giturl": "https://gecgithub01.walmart.com/SSAEIM/rfid-load-producer.git"
+    },
+    "flows":{
+        "dev":{
+            "appurl":"kafka-oo-355344663-8-370414565.non-prod-4-az-westus.kafka-cluster-shared.ms-df-messaging.stg-az-westus-1.prod.us.walmart.net:9092",
+            "duration":"30",
+            "vu":"10",
+            "timeout":"3000",
+            "dc_load_distribution": {"scus-perf-a1":100},
+            "config":"/perf/perf.json"
+        }
+    }
+}

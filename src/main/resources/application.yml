@@ -1,0 +1,21 @@
+kafka:
+  broker: "kafka.kafka-cluster-shared.non-prod-4-az-westus.prod.us.walmart.net:9092"
+  topic: "rf-outs-stream"
+  records-per-second: 40
+  producer-request-timeout-ms: 60000
+  producer-max-in-flight-requests-per-connection: 1
+  producer-acks: 1
+  auto-commit-interval: 0
+  use-schema-registry: true
+  schema-registry-url: "http://ims.dev.ims-kafka-container.ssaeim.prod.walmart.com:8081"
+  auto-off-set-reset: "earliest"
+  cache-max-bytes-buffering: 10485760
+  application-id: "ims-streams"
+  streams-close-timeout: "PT1M"
+  registered-metrics: "consumer-fetch-manager-metrics,producer-metrics"
+  client-id: "ims-ingest"
+
+spring:
+  application:
+    name: "ims-outs-load-producer"
+

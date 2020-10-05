@@ -1,0 +1,12 @@
+tools:
+  jdk:
+    - 9
+  maven:
+    - 3.3.9
+triggers:
+  - push: disabled
+  - pr: disabled
+flows:
+  default:
+    - mvn clean compile
+    - mvn spring-boot:run

@@ -1,0 +1,24 @@
+{
+	"projectName": "ims-rfid-events-perf-test1",
+	"request": [
+		{
+			"transactionName": "Thread_group1",
+			"rampUp": {
+				"totalVU": 10,
+				"rampupvu": 10,
+				"rampduration": 1,
+				"holdrampup": 1,
+				"duration": 1
+			},
+			"messages": [
+				{
+					"name": "producer-test",
+					"type": "producer",
+					"payload": "{\"specversion\":\"1.0\",\"type\":\"rfid.outs.manual.event\",\"source\":\"com.walmart.ssaeis.rfid.outs\",\"id\":\"6c4c0b31-c619-4f59-90ea-673c6f595e55\",\"time\":\"2020-02-13T15:24:32.521Z\",\"dataContentype\":\"application/json\",\"data\":{\"store\":32520,\"country\":\"US\",\"primeItemNbr\":562910925,\"gtin14\":\"00191056031350\",\"location\":\"F_5_4\",\"sessionId\":\"943b32d0-54a9-439d-8528-01618881c189\",\"deptNbr\":10}}",
+					"kafkaBrokers": "kafka-oo-355344663-8-370414565.non-prod-4-az-westus.kafka-cluster-shared.ms-df-messaging.stg-az-westus-1.prod.us.walmart.net:9092",
+					"kafkaTopic": "rf-outs-stream"
+				}
+			]
+		}
+	]
+}
